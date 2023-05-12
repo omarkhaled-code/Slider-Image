@@ -1,0 +1,140 @@
+:root {
+    --green-color: #26f1ad;
+    --red-color: #e71b51;
+    --yellow-color: #dae982;
+    --oragne-color: #f78e24;
+    --purble-color: #9c00c3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial;
+    background-color: black;
+}
+
+.slider-container {
+    position: relative;
+    width: 800px;
+    height: 250px;
+    margin: 100px auto;
+}
+
+.slider-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* green */
+.green {
+    box-shadow: 0px 3px 28px #00ffaa59;
+}
+
+.green-active {
+    background-color: #00ffaa;
+}
+
+/* e71b532b red */
+.red {
+    box-shadow: 0px 3px 28px #e71b5150;
+}
+
+.red-active {
+    background-color: #e71b51;
+}
+
+/* d9e9822b yellow */
+.yellow {
+    box-shadow: 0px 3px 28px #dae98257;
+}
+
+.yellow-active {
+    background-color: #dae982;
+    color: black !important;
+}
+
+/* f78f242b orange */
+.orange {
+    box-shadow: 0px 3px 28px #f78e2462;
+}
+
+.orange-active {
+    background-color: #f78e24;
+}
+
+/* 9c00c359 purple */
+.purble {
+    box-shadow: 0px 3px 28px #9c00c36b;
+}
+
+.purble-active {
+    background-color: #9c00c3;
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slide-count {
+    width: 500px;
+    margin: auto;
+}
+
+.slide-count .prev,
+.slide-count .next {
+    width: 20%;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+    color: white;
+    border-radius: 16px;
+}
+
+.slide-count .prev {
+    float: left;
+}
+
+.slide-count .next {
+    float: right;
+    overflow: hidden;
+}
+
+.indicator {
+    width: 60%;
+    float: left;
+}
+
+.indicator ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.indicator ul li {
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: #333;
+}
+
+.not-allowed {
+    cursor: not-allowed !important;
+}
+
+.indicator ul li.active {
+    background-color: var(--green-color);
+}
